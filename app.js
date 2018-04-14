@@ -28,6 +28,13 @@ app.get('/penton/yearBusinessStarted/:id', function (req, res) {
     res.send({"value": 2004, "location": "penton/yearBusinessStarted", "vendor": "penton"});
 });
 
+app.get('/penton/numEmployees/:id', function (req, res) {
+    var recordID = req.params.id;
+    console.log('loading numEmployees for user '+recordID);
+
+    res.send({"value": 5, "location": "penton/numEmployees", "vendor": "verisk"});
+});
+
 var server = app.listen(process.env.PORT || 4000, function () {
   var host = server.address().address;
   var port = server.address().port;
