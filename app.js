@@ -32,7 +32,21 @@ app.get('/penton/numEmployees/:id', function (req, res) {
     var recordID = req.params.id;
     console.log('loading numEmployees for user '+recordID);
 
-    res.send({"value": 5, "location": "penton/numEmployees", "vendor": "verisk"});
+    res.send({"value": 5, "location": "penton/numEmployees", "vendor": "penton"});
+});
+
+app.get('/penton/latitude/:id', function (req, res) {
+    var recordID = req.params.id;
+    console.log('loading numEmployees for user '+recordID);
+
+    res.send({"value": 123, "location": "penton/latitude", "vendor": "penton"});
+});
+
+app.get('/penton/longitude/:id', function (req, res) {
+    var recordID = req.params.id;
+    console.log('loading numEmployees for user '+recordID);
+
+    res.send({"value": -125, "location": "penton/longitude", "vendor": "penton"});
 });
 
 var server = app.listen(process.env.PORT || 4000, function () {
